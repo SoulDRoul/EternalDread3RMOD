@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7C7489A0-F057-48EC-9A1A-5AE5524B0D1D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EternalDread3RMOD</RootNamespace>
+    <AssemblyName>EternalDread3RMOD</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>D:\PC\Eternal Dread 3\BepInEx\plugins\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>D:\PC\Eternal Dread 3\BepInEx\core\0Harmony.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>D:\PC\Eternal Dread 3\Game_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="BepInEx">
+      <HintPath>D:\PC\Eternal Dread 3\BepInEx\core\BepInEx.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TextMeshPro-2017.3-Runtime">
+      <HintPath>D:\PC\Eternal Dread 3\Game_Data\Managed\TextMeshPro-2017.3-Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>D:\PC\Eternal Dread 3\Game_Data\Managed\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>D:\PC\Eternal Dread 3\Game_Data\Managed\UnityEngine.AnimationModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>D:\PC\Eternal Dread 3\Game_Data\Managed\UnityEngine.AudioModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>D:\PC\Eternal Dread 3\Game_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>D:\PC\Eternal Dread 3\Game_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>D:\PC\Eternal Dread 3\Game_Data\Managed\UnityEngine.PhysicsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>D:\PC\Eternal Dread 3\Game_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>D:\PC\Eternal Dread 3\Game_Data\Managed\UnityEngine.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>D:\PC\Eternal Dread 3\Game_Data\Managed\UnityEngine.UIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AlertUI.cs" />
+    <Compile Include="BulletSpawnTimeTracker.cs" />
+    <Compile Include="ChargeStunTracker.cs" />
+    <Compile Include="ComboState.cs" />
+    <Compile Include="ComboUI.cs" />
+    <Compile Include="CrossPassiveButtonUI.cs" />
+    <Compile Include="CrossPassiveHelper.cs" />
+    <Compile Include="CutsceneMinimapHider.cs" />
+    <Compile Include="DeathTimeSkipManager.cs" />
+    <Compile Include="DeathTimeSkipUI.cs" />
+    <Compile Include="DialogueCtrlHintUI.cs" />
+    <Compile Include="DodgeJumpInertia.cs" />
+    <Compile Include="DodgeTapState.cs" />
+    <Compile Include="DropContext.cs" />
+    <Compile Include="EcologyLoadHelper.cs" />
+    <Compile Include="EcologyPersistence.cs" />
+    <Compile Include="EcologyQuestBypassHelper.cs" />
+    <Compile Include="EcologyRegistry.cs" />
+    <Compile Include="EcologySaveData.cs" />
+    <Compile Include="EcologySceneState.cs" />
+    <Compile Include="EcologySpawnFilter.cs" />
+    <Compile Include="EcologySpawnGuard.cs" />
+    <Compile Include="EcologySpawnSetTagDelay.cs" />
+    <Compile Include="EcologyUI.cs" />
+    <Compile Include="EnemyAlertTracker.cs" />
+    <Compile Include="ExpContext.cs" />
+    <Compile Include="ExpRequirementHelper.cs" />
+    <Compile Include="FontLoader.cs" />
+    <Compile Include="GameTimeJump.cs" />
+    <Compile Include="GameTimeTracker.cs" />
+    <Compile Include="GatherRunner.cs" />
+    <Compile Include="GuardCounterState.cs" />
+    <Compile Include="InventoryExpandHelper.cs" />
+    <Compile Include="InventoryShrinkHelper.cs" />
+    <Compile Include="InventorySortButton.cs" />
+    <Compile Include="InventorySorter.cs" />
+    <Compile Include="InvincibleData.cs" />
+    <Compile Include="InvincibleVisual.cs" />
+    <Compile Include="Localization.cs" />
+    <Compile Include="MinimapIcon.cs" />
+    <Compile Include="MinimapIconManager.cs" />
+    <Compile Include="MinimapIconRefresher.cs" />
+    <Compile Include="MinimapIconRegistry.cs" />
+    <Compile Include="MinimapIconTag.cs" />
+    <Compile Include="ModSceneHelper.cs" />
+    <Compile Include="NightEnemyTracker.cs" />
+    <Compile Include="NoiseMarker.cs" />
+    <Compile Include="NoiseRegistry.cs" />
+    <Compile Include="NoiseTracker.cs" />
+    <Compile Include="PassiveSlotHelper.cs" />
+    <Compile Include="Patch_AddItem_Start.cs" />
+    <Compile Include="Patch_AddSkillPointEv_SetSkillPoint_Refresh.cs" />
+    <Compile Include="Patch_AddSkillPointEv_Start_Minimap.cs" />
+    <Compile Include="Patch_AddSkillPointEv_Start_Refresh.cs" />
+    <Compile Include="Patch_AiStatus_SetTag_EcologySpawn.cs" />
+    <Compile Include="Patch_AiStatus_Start_Alert.cs" />
+    <Compile Include="Patch_AiStatus_Start_AngryDuration.cs" />
+    <Compile Include="Patch_AiStatus_Start_Minimap.cs" />
+    <Compile Include="Patch_AiStatus_Start_Night.cs" />
+    <Compile Include="Patch_AiStatus_Start_Noise.cs" />
+    <Compile Include="Patch_AllyFriendlyFire.cs" />
+    <Compile Include="Patch_AnimateText_CtrlHint.cs" />
+    <Compile Include="Patch_AnimateText_Update_CtrlSkip.cs" />
+    <Compile Include="Patch_AoeSelfDamage.cs" />
+    <Compile Include="Patch_AreaDamageSkill_EnemyHit.cs" />
+    <Compile Include="Patch_AttackTrigger_GuardInterrupt.cs" />
+    <Compile Include="Patch_AutoCalculateStatus_LevelCap.cs" />
+    <Compile Include="Patch_BulletStatus_ChargeEffects.cs" />
+    <Compile Include="Patch_BulletStatus_ComboTrack.cs" />
+    <Compile Include="Patch_BulletStatus_CritRate.cs" />
+    <Compile Include="Patch_BulletStatus_FriendlyFire.cs" />
+    <Compile Include="Patch_BulletStatus_GuardCounter.cs" />
+    <Compile Include="Patch_BulletStatus_MultiCrit.cs" />
+    <Compile Include="Patch_BulletStatus_StunCrit.cs" />
+    <Compile Include="Patch_CallNearbyInterrupt.cs" />
+    <Compile Include="Patch_CallRadius_DifficultyScale.cs" />
+    <Compile Include="Patch_CharCreation_BackToTitle_PermadeathButton.cs" />
+    <Compile Include="Patch_CharCreation_OpenCreateMenu_Permadeath.cs" />
+    <Compile Include="Patch_CharCreation_OpenCreateMenu_PermadeathButton.cs" />
+    <Compile Include="Patch_CharCreation_StartGame_Permadeath.cs" />
+    <Compile Include="Patch_ChestAddItem_Start_Minimap.cs" />
+    <Compile Include="Patch_ConeVision.cs" />
+    <Compile Include="Patch_DetectRangeScale.cs" />
+    <Compile Include="Patch_Dialogue_Update_CtrlSkip.cs" />
+    <Compile Include="Patch_DodgeJumpInertia.cs" />
+    <Compile Include="Patch_DodgeSpeed.cs" />
+    <Compile Include="Patch_DodgeTap.cs" />
+    <Compile Include="Patch_DropItemPro_Start.cs" />
+    <Compile Include="Patch_DropItem_Mark.cs" />
+    <Compile Include="Patch_DropItem_Start.cs" />
+    <Compile Include="Patch_GainEXP_Start.cs" />
+    <Compile Include="Patch_GameOver_Start_Flag.cs" />
+    <Compile Include="Patch_GameOver_Start_Permadeath.cs" />
+    <Compile Include="Patch_GlobalClock_Awake_TimeCost.cs" />
+    <Compile Include="Patch_GlobalClock_TimeTracker.cs" />
+    <Compile Include="Patch_GlobalVar_ResetAllVariable_TimeTracker.cs" />
+    <Compile Include="Patch_GlobalClock_Update.cs" />
+    <Compile Include="Patch_GlobalVar_SettingNewPlayer_ExpandArrays.cs" />
+    <Compile Include="Patch_GlobalVar_SettingNewPlayer_ExpandInventory.cs" />
+    <Compile Include="Patch_GlobalVar_SettingNewPlayer_ExpRequirement.cs" />
+    <Compile Include="Patch_GlobalVar_SettingNewPlayer_TimeCost.cs" />
+    <Compile Include="Patch_GuardAnimation_Sound.cs" />
+    <Compile Include="Patch_HarvestSource_QuickGather.cs" />
+    <Compile Include="Patch_InventoryUiCanvas_Update_RefreshLength.cs" />
+    <Compile Include="Patch_InventoryUi_PageTextWidth.cs" />
+    <Compile Include="Patch_InventoryUi_RefreshPages.cs" />
+    <Compile Include="Patch_Inventory_AddEquipment_Expand.cs" />
+    <Compile Include="Patch_Inventory_AddItem_Expand.cs" />
+    <Compile Include="Patch_Inventory_QuickUse.cs" />
+    <Compile Include="Patch_Inventory_Sort.cs" />
+    <Compile Include="Patch_PlayerInputController_GuardDodge.cs" />
+    <Compile Include="Patch_PlayerInputController_Stamina.cs" />
+    <Compile Include="Patch_Quit_HideMinimap.cs" />
+    <Compile Include="Patch_ResourceNode_Mark.cs" />
+    <Compile Include="Patch_ResourceNode_Start_Minimap.cs" />
+    <Compile Include="Patch_ResourcePickup_Start_Minimap.cs" />
+    <Compile Include="Patch_RespawnMonster_Start_EcologySpawn.cs" />
+    <Compile Include="Patch_SaveLoadXML_LoadGameWithEvent_Permadeath.cs" />
+    <Compile Include="Patch_SaveLoadXML_LoadGame_Ecology.cs" />
+    <Compile Include="Patch_SaveLoadXML_LoadGame_Permadeath.cs" />
+    <Compile Include="Patch_SaveLoadXML_LoadGame_SkillPoint.cs" />
+    <Compile Include="Patch_SaveLoadXML_SaveGame_Ecology.cs" />
+    <Compile Include="Patch_SaveLoadXML_SaveGame_Permadeath.cs" />
+    <Compile Include="Patch_SaveLoadXML_SaveGame_Shrink.cs" />
+    <Compile Include="Patch_SaveLoadXML_SaveGame_SkillPoint.cs" />
+    <Compile Include="Patch_SharedStashCanvas_UpdateUi_RefreshMaxPage.cs" />
+    <Compile Include="Patch_SharedStashCanvas_Update_ConfirmHotkey.cs" />
+    <Compile Include="Patch_SharedStashCanvas_Update_QuantityHotkey.cs" />
+    <Compile Include="Patch_ShareStashXML_LoadStash_Align.cs" />
+    <Compile Include="Patch_ShareStashXML_SaveStash_Shrink.cs" />
+    <Compile Include="Patch_ShopCanvasC_Update_ConfirmHotkey.cs" />
+    <Compile Include="Patch_ShopCanvasC_Update_QuantityHotkey.cs" />
+    <Compile Include="Patch_SkillButtonCanvas_ShowSkillTooltip_CrossPassiveCost.cs" />
+    <Compile Include="Patch_SkillTreeCanvas_CheckUnlockSkill_Prereq.cs" />
+    <Compile Include="Patch_SkillTreeCanvas_LearnSkill_CrossPassiveCost.cs" />
+    <Compile Include="Patch_SkillTreeCanvas_ShowSignetSetting_ExpandIcons.cs" />
+    <Compile Include="Patch_SkillTreeCanvas_Start_CrossPassive.cs" />
+    <Compile Include="Patch_SkillTreeCanvas_Start_CrossPassiveUI.cs" />
+    <Compile Include="Patch_SkillTreeCanvas_Start_ExpandPassiveSlots.cs" />
+    <Compile Include="Patch_SkillTreeCanvas_SwitchJobTab_CrossPassive.cs" />
+    <Compile Include="Patch_Skill_Start_ExpandPassiveSlots.cs" />
+    <Compile Include="Patch_SleepTime_SpeedController.cs" />
+    <Compile Include="Patch_SpawnPlayer_Awake.cs" />
+    <Compile Include="Patch_SprintAnyDirection.cs" />
+    <Compile Include="Patch_Status_Awake_ChargeStun.cs" />
+    <Compile Include="Patch_Status_Awake_Cleanup.cs" />
+    <Compile Include="Patch_Status_Awake_ExpRequirement.cs" />
+    <Compile Include="Patch_Status_BurnSpread.cs" />
+    <Compile Include="Patch_Status_Death_Combo.cs" />
+    <Compile Include="Patch_Status_Death_Ecology.cs" />
+    <Compile Include="Patch_Status_DodgeRollBurn.cs" />
+    <Compile Include="Patch_Status_DoTKill.cs" />
+    <Compile Include="Patch_Status_GainEXP.cs" />
+    <Compile Include="Patch_Status_GainEXP_ExpMultiplier.cs" />
+    <Compile Include="Patch_Status_InflictBurn_Duration.cs" />
+    <Compile Include="Patch_Status_Invincible.cs" />
+    <Compile Include="Patch_Status_LevelUp_ExpRequirement.cs" />
+    <Compile Include="Patch_Status_LevelUp_Minimap.cs" />
+    <Compile Include="Patch_Status_OnDamage_Downed.cs" />
+    <Compile Include="Patch_Status_OnDamage_GuardCounter.cs" />
+    <Compile Include="Patch_Status_OnDamage_Modifiers.cs" />
+    <Compile Include="Patch_Status_Update.cs" />
+    <Compile Include="Patch_Teleporter_ChangeMap_TimeCost.cs" />
+    <Compile Include="Patch_Title_Start_Permadeath.cs" />
+    <Compile Include="Patch_Title_Start_UiResume.cs" />
+    <Compile Include="Patch_WaypointWarp_ChangeMap_TimeCost.cs" />
+    <Compile Include="PauseInfoRenderer.cs" />
+    <Compile Include="PermadeathButtonUI.cs" />
+    <Compile Include="PermadeathDeathUI.cs" />
+    <Compile Include="PermadeathFileHelper.cs" />
+    <Compile Include="PermadeathState.cs" />
+    <Compile Include="PlayerActionStateHelper.cs" />
+    <Compile Include="PlayerLightController.cs" />
+    <Compile Include="Plugin.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegionState.cs" />
+    <Compile Include="RespawnMonsterEcologyDelay.cs" />
+    <Compile Include="SelfDamageHelper.cs" />
+    <Compile Include="SelfHitCooldown.cs" />
+    <Compile Include="SharedStashSortButton.cs" />
+    <Compile Include="SkillPointIconScanner.cs" />
+    <Compile Include="SkillPointPersistence.cs" />
+    <Compile Include="SkillPointRegistry.cs" />
+    <Compile Include="SkillPointSaveData.cs" />
+    <Compile Include="SleepHintUI.cs" />
+    <Compile Include="SleepSpeedController.cs" />
+    <Compile Include="SpeedAppliedTracker.cs" />
+    <Compile Include="StatusCleanupTracker.cs" />
+    <Compile Include="TestMoneyHotkey.cs" />
+    <Compile Include="ThreatAttackingDetector.cs" />
+    <Compile Include="ThreatRingUI.cs" />
+    <Compile Include="UiSuppress.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Patch_Status_OnDamage.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

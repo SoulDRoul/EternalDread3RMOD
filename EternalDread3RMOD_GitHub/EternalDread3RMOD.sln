@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.36422.26
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EternalDread3RMOD", "EternalDread3RMOD\EternalDread3RMOD.csproj", "{7C7489A0-F057-48EC-9A1A-5AE5524B0D1D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7C7489A0-F057-48EC-9A1A-5AE5524B0D1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C7489A0-F057-48EC-9A1A-5AE5524B0D1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C7489A0-F057-48EC-9A1A-5AE5524B0D1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C7489A0-F057-48EC-9A1A-5AE5524B0D1D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1FEF029F-D1C0-41F0-AE7D-4E98104BC35B}
+	EndGlobalSection
+EndGlobal
